@@ -1,42 +1,4 @@
-const slides = [
-	{
-		"image":"slide1.jpg",
-		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
-	},
-	{
-		"image":"slide2.jpg",
-		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
-	},
-	{
-		"image":"slide3.jpg",
-		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
-	},
-	{
-		"image":"slide4.png",
-		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
-	}
-]
-
-//let btnNext = document.querySelector(".arrow_left")
-//let btnPrevious = document.querySelector("arrow_right")
-//afficherImage(slides[i])
-//btnNext.addEventListener("click", () => {
-//console.log(i++)
-//})
-
-//let footer = document.querySelector("footer")
-//footer.innerHTML = div
-
-
-
-console.log(slides[0].tagLine)
-console.log(slides[0].image)
-console.log(slides[1])
-console.log(slides[2])
-console.log(slides[3])
-
-let i = 0
-
+// Etape 1 addEventListener et console.log		
 let slideBoutonLeft = document.querySelector(".arrow_left");
 slideBoutonLeft.addEventListener("click", function () {
 	console.log("Vous avez cliqué sur le bouton gauche")
@@ -47,54 +9,57 @@ slideBoutonRight.addEventListener("click", function () {
 	console.log("Vous avez cliqué sur le bouton droite")
 });
 
+ 
+    let pathImage = ("/assets/images/slideshow/")
+ // Tableau contenant les éléments avec des clés et des valeurs
+	let diapo = [
+		{ image: pathImage + "slide1.jpg", tagLine: "Impressions tous formats <span>en boutique et en ligne</span>" },
+		{ image: pathImage + "slide2.jpg", tagLine: "Tirages haute définition grand format <span>pour vos bureaux et events</span>" },
+		{ image: pathImage + "slide3.jpg", tagLine: "Grand choix de couleurs <span>de CMJN aux pantones</span>" },
+		{ image: pathImage + "slide4.png", tagLine: "Autocollants <span>avec découpe laser sur mesure</span>" },
+		// Ajoutez d'autres éléments avec leurs clés et valeurs ici
+	  ];
+	
 
 
+    // Fonction pour générer le contenu HTML
+    function genererContenu(slides) {
+      let contenu = "";
 
+      for (let i = 0; i < diapo.length; i++) {
+        let element = diapo[i];
+        let image = element.image;
+        let tagLine = element.tagLine;
 
+        // Générer le contenu HTML pour chaque élément
+        contenu += "<div class='slider_content_item'>";
+        contenu += "<img src='" + image + "' class='image'>";
+        contenu += "<p class='tag-line'>" + tagLine + "</p>";
+        contenu += "</div>";
+      }
 
-// Tableau des éléments avec des clés et des valeurs
-const tableau = [
-	{ image: "./assets/images/slideshow/slide1.jpg", tagLine: "Impressions tous formats <span>en boutique et en ligne</span>" },
-	{ image: "./assets/images/slideshow/slide2.jpg", tagLine: "Légende de l'image 2" },
-	{ image: "./assets/images/slideshow/slide3.jpg", tagLine: "Légende de l'image 3" },
-	{ image: "./assets/images/slideshow/slide4.png", tagLine: "Légende de l'image 3" },
-  ];
-  
-    // Récupérer l'élément div pour contenir les éléments
-    let containerDiv = document.querySelector(".slider_content");
-
-    // Parcourir le tableau et générer le contenu HTML
-    for (let i = 0; i < tableau.length; i++) {
-      let element = tableau[i];
-
-      // Créer un élément div pour chaque élément du tableau
-      let divElement = document.createElement("div");
-	  divElement.classList.add("slider_content_item");
-
-      // Créer l'élément img pour l'image
-      let imgElement = document.createElement("img");
-      imgElement.src = element.image;
-	  imgElement.classList.add("slider_content_item");
-      divElement.appendChild(imgElement);
-
-      // Créer l'élément p pour la tagLine
-      let pElement = document.createElement("p");
-      pElement.textContent = element.tagLine;
-      divElement.appendChild(pElement);
-
-      // Ajouter l'élément div au conteneur
-      containerDiv.appendChild(divElement);
-	  
+      return contenu;
     }
 
+    // Obtenir une référence à l'élément cible
+    let divElement = document.querySelector(".slider_content");
+
+    // Générer le contenu HTML et l'insérer dans l'élément cible
+    divElement.innerHTML = genererContenu(diapo);
+
+
+
+    // Boutons next and Previous - effet scrollLeft
 	function previous() {
 		const widthSlider = document.querySelector('.slider_content').offsetWidth;
 		document.querySelector('.slider_content').scrollLeft -= widthSlider;
-	
-	}
+		}
 	
 	function next() {
 		const widthSlider = document.querySelector('.slider_content').offsetWidth;
 		document.querySelector('.slider_content').scrollLeft += widthSlider;
-	
-	}
+		}
+
+
+		
+
