@@ -9,19 +9,16 @@ slideBoutonRight.addEventListener("click", function () {
 	console.log("Vous avez cliqué sur le bouton droite")
 });
 
- 
     let pathImage = ("/assets/images/slideshow/")
  // Tableau contenant les éléments avec des clés et des valeurs
 	let diapo = [
-		{ image: pathImage + "slide1.jpg", tagLine: "Impressions tous formats <span>en boutique et en ligne</span>" },
-		{ image: pathImage + "slide2.jpg", tagLine: "Tirages haute définition grand format <span>pour vos bureaux et events</span>" },
-		{ image: pathImage + "slide3.jpg", tagLine: "Grand choix de couleurs <span>de CMJN aux pantones</span>" },
-		{ image: pathImage + "slide4.png", tagLine: "Autocollants <span>avec découpe laser sur mesure</span>" },
+		{ image: pathImage + "slide1.jpg", tagLine: "Impressions tous formats <span>en boutique et en ligne</span>", bullet : "x" },
+		{ image: pathImage + "slide2.jpg", tagLine: "Tirages haute définition grand format <span>pour vos bureaux et events</span>", bullet : "x" },
+		{ image: pathImage + "slide3.jpg", tagLine: "Grand choix de couleurs <span>de CMJN aux pantones</span>", bullet : "x" },
+		{ image: pathImage + "slide4.png", tagLine: "Autocollants <span>avec découpe laser sur mesure</span>", bullet : "x" },
 		// Ajoutez d'autres éléments avec leurs clés et valeurs ici
 	  ];
 	
-
-
     // Fonction pour générer le contenu HTML
     function genererContenu(slides) {
       let contenu = "";
@@ -49,17 +46,36 @@ slideBoutonRight.addEventListener("click", function () {
 
 
 
+
+
     // Boutons next and Previous - effet scrollLeft
 	function previous() {
-		const widthSlider = document.querySelector('.slider_content').offsetWidth;
-		document.querySelector('.slider_content').scrollLeft -= widthSlider;
-		}
+		const widthSlider = document.querySelector('.slider').offsetWidth;
+		const sliderContent = document.querySelector('.slider_content');
+		sliderContent.scrollLeft -= widthSlider;
+		const scrollLeft = sliderContent.scrollLeft;
+		const itemsSlider = sliderContent.querySelectorAll('.slider_content_item');
 	
-	function next() {
-		const widthSlider = document.querySelector('.slider_content').offsetWidth;
-		document.querySelector('.slider_content').scrollLeft += widthSlider;
+		if(scrollLeft == 0) {
+			sliderContent.scrollLeft = widthSlider * (itemsSlider.length -1);
+		}
+	}
+	
+		function next() {
+			const widthSlider = document.querySelector('.slider').offsetWidth;
+			const sliderContent = document.querySelector('.slider_content');
+			sliderContent.scrollLeft += widthSlider;
+			const scrollLeft = sliderContent.scrollLeft;
+			const itemsSlider = sliderContent.querySelectorAll('.slider_content_item');
+		
+			if(scrollLeft == widthSlider * (itemsSlider.length -1)) {
+				sliderContent.scrollLeft = 0;
+			}
 		}
 
 
-		
+
+
+
+
 

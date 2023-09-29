@@ -110,13 +110,19 @@ header {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	min-height: 470px;
+	height: 470px;
 	position: relative;
 }
 
+.slider {
+	display: flex;
+	width: 100%;
+	min-height: 470px;
+
+}
 
 .slider_content {
-	min-height: 470px;
+	height: 470px;
 	width: 100%;
 	display: flex;
 	overflow: hidden;
@@ -193,7 +199,8 @@ button#slidebouton {
 /* Fin du code CSS pour le carousel */
 #banner p {
 	display: block;
-	margin-top: -235px;
+	position: relative;
+	margin-top: -300px;
 	font-family: 'Roboto Slab', sans-serif;
 	font-weight: 900;
 	font-size: 50px;
