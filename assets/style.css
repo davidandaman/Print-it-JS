@@ -159,20 +159,21 @@ header {
 	width: 95%;
 }
 
-button#slidebouton {
+button#slidebouton_left,
+button#slidebouton_right {
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
 }
 
-
 #banner .arrow_left {
 	left: 10px;
-
 }
+
 #banner .arrow_right {
 	right: 10px;
 }
+
 /* Gestion des points du carrousel */
 .dots {
 	position: absolute;
@@ -183,6 +184,7 @@ button#slidebouton {
 	justify-content: center;
 	align-items: center;
 }
+
 .dot {
 	margin-inline: 5px;
 	width: 13px;
@@ -192,12 +194,10 @@ button#slidebouton {
 	border-radius: 100%;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
 }
+
 .dot_selected {
 	background-color: #fff;
 }
-
-
-
 
 /* Fin du code CSS pour le carousel */
 #banner p {
@@ -212,11 +212,13 @@ button#slidebouton {
 	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 	text-align: center;
 }
+
 #banner span {
 	display: block;
 	font-weight: 400;
 	font-size: 30px;
 }
+
 #about-us {
 	display: flex;
 }
@@ -230,7 +232,6 @@ button#slidebouton {
 	padding-left:2em;
 	width: 65%;
 	margin-bottom: 1em;
-
 }
 
 #products {

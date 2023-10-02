@@ -9,7 +9,7 @@ slideBoutonRight.addEventListener("click", function () {
 	console.log("Vous avez cliqué sur le bouton droite")
 });
 
-    let pathImage = ("/assets/images/slideshow/")
+    let pathImage = ("./assets/images/slideshow/")
  // Tableau contenant les éléments avec des clés et des valeurs
 	let diapo = [
 		{ image: pathImage + "slide1.jpg", tagLine: "Impressions tous formats <span>en boutique et en ligne</span>",},
@@ -19,7 +19,6 @@ slideBoutonRight.addEventListener("click", function () {
 		// Ajoutez d'autres éléments avec leurs clés et valeurs ici
 	  ];
 	
-
 	  function genererContenu(slides) {
 		let contenu = "";
 		let dots = "";
@@ -55,6 +54,7 @@ divElement.innerHTML = genererContenu(diapo);
 // Obtenir une référence aux éléments dots
 let dotsElements = document.querySelectorAll(".dot");
 
+
 // Gestionnaire d'événement pour le scrollLeft de l'élément cible
 divElement.addEventListener("scroll", function () {
   // Obtenir la position actuelle de la slide
@@ -65,10 +65,6 @@ divElement.addEventListener("scroll", function () {
     dot.classList.toggle("dot_selected", index === slidePosition);
   });
 });
-
-
-
-
 
 
 

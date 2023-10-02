@@ -2,11 +2,29 @@
 # Print-It WebSite v.1
 
 
-Date de démarrage du projet 
+### Nom du projet
+Print-It v.1 - Intégration du slideshow
 
-15-08-2023
+
+### Déploiement
+Le site est hébergé dans un dépot sur la plateforme Git Hub :
+https://github.com/davidandaman/Print-it-JS
+
+Version en ligne du projet Ohmyfood 1.0 :
+https://printit.pacificgraphic.com
+
+### Technologies
+* HTML5/CSS3/JS
 
 
-Auteur
+### Date de création
+* 15 septembre 2023
 
-David JULIEN
+
+### Auteur
+* David JULIEN
+
+
+
+### License
+* Ce projet est sous la licence GNU GPL V3.
