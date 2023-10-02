@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Print it ! - Impressions d'entreprise</title>
-	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="assets/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;900&display=swap" rel="stylesheet">
+	<!-- DJ Ajout fichier js -->
+	<script src="assets/script.js" defer></script>
 </head>
 <body>
 <header class="container">
@@ -17,25 +19,45 @@
 	<a class="btn devis" href="mailto:contact@print-it.tld">Devis</a>
 </header>
 <main>
-	<div id="banner">
-		<img class="banner-img" src="./assets/images/slideshow/slide1.jpg" alt="Banner Print-it">
-		<p>Impressions tous formats <span>en boutique et en ligne</span></p>
+
+
+<div id="banner">
+	<div class = "slider">
+        <div class = "slider_content"> 
+            <!-- Le slideshow JS -->
+        </div>
+	</div>
+
+	
+
+
 		<!-- DJ Ajout des fleches du slideshow -->
 		<div class="arrow">
-			<div class="arrow_left">
+			<button onclick="previous()" id="slidebouton" class="arrow_left">
 				<img
 					src="assets/images/arrow_left.png"
 					alt="Précédente"/>
-			</div>
-			<div class="arrow_right">
+			</button>
+
+
+		<!-- DJ Ajout des fleches du slideshow -->
+			<button onclick="next()" id="slidebouton" class="arrow_right">
 				<img
 					src="assets/images/arrow_right.png"
 					alt="Suivante"/>
-			</div>
+			</button>
 		</div>
+
+
+
+
 		<div class="dots">
+
 		</div>
+
 	</div>
+
+
 	<section id="about-us" class="container">
 		<div>
 			<h2>Qui sommes-nous ?</h2>
