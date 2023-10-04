@@ -9,13 +9,13 @@ Print-It 1.0 - Intégration du caroussel
 ### Déploiement
 Le site est hébergé dans un dépot sur la plateforme Git Hub :
 
-    https://github.com/davidandaman/Print-it-JS
+   * https://github.com/davidandaman/Print-it-JS
 
 Démo visuelle du projet Print-it 1.0 :
 
-    https://printit.pacificgraphic.com
+   * https://printit.pacificgraphic.com
 
-    https://davidandaman.github.io/Print-it-JS
+   * https://davidandaman.github.io/Print-it-JS
 
 
 ### Technologies

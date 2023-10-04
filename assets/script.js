@@ -18,7 +18,7 @@ let pathImage = ("./assets/images/slideshow/")
 		{ image: pathImage + "slide4.png", tagLine: "Autocollants <span>avec découpe laser sur mesure</span>"},
 	  ];
 	
-	  function genererContenu(slides) {
+	  function genererContenu(diapo) {
 		let contenu = "";
 		let dots = "";
 	  
