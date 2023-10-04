@@ -1,17 +1,22 @@
 
-# Print-It WebSite v.1
+# Print-It WebSite version 1.0
 
 
 ### Nom du projet
-Print-It v.1 - Intégration du slideshow
+Print-It 1.0 - Intégration du caroussel
 
 
 ### Déploiement
 Le site est hébergé dans un dépot sur la plateforme Git Hub :
-https://github.com/davidandaman/Print-it-JS
 
-Version en ligne du projet Ohmyfood 1.0 :
-https://printit.pacificgraphic.com
+    https://github.com/davidandaman/Print-it-JS
+
+Démo visuelle du projet Print-it 1.0 :
+
+    https://printit.pacificgraphic.com
+
+    https://davidandaman.github.io/Print-it-JS
+
 
 ### Technologies
 * HTML5/CSS3/JS
